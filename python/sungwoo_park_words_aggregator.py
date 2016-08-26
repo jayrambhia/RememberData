@@ -44,7 +44,7 @@ def writeToJson2(filename, output_filename):
 			name = word + " " + words[1].strip()
 
 			classjson['name'] = name
-			classjson['descriptopn'] = 	name
+			classjson['description'] = 	name
 			classjson['code'] = "GRE_B " + name
 			continue
 
