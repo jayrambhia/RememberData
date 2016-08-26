@@ -5,6 +5,7 @@ import json
 
 def writeToFile(classjson, output_filename):
 	w = open(output_filename + "/" + classjson['code'] + ".json", 'w')
+	classjson['url'] = output_filename + "/" + classjson['code'] + ".json"
 	w.write(json.dumps(classjson))
 	w.close()
 
@@ -12,6 +13,7 @@ def writeClassesToFile(classes, output_filename):
 	w = open(output_filename + "/_classes.json", "w")
 	for classjson in classes:
 		classjson.pop('data')
+		classjson['url'] = output_filename + "/" + classjson['code'] + ".json"
 
 	w.write(json.dumps(classes))	
 	w.close()
